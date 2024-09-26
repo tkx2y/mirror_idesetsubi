@@ -1,0 +1,132 @@
+.form{
+    background-color:#F1F4F8;
+    padding-top: 70px;
+}
+
+.formArea{
+    background-color: #fff;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+.formList{
+    display: flex;
+    flex-direction: column;
+    gap: 30px 00;
+}
+
+.formList li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-bottom: solid 1px #E6E6E6;
+    padding-bottom: 30px;
+}
+
+.formHead{
+    width: 30%;
+}
+
+.formHead span{
+    padding: 3px 10px 5px;
+    background-color: #B7282E;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 3px;
+    position: relative;
+    top: -1px;
+    margin-left: 1rem;
+}
+
+.formTtl{
+    display: inline-block;
+    font-weight: bold;
+}
+
+.formItem{
+    width: 70%;
+}
+
+.formItem input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: solid 1px #C4C4C4;
+    box-sizing: border-box;
+}
+
+.formItem textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: solid 1px #C4C4C4;
+    box-sizing: border-box;
+}
+
+.formBtn{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.alert{
+    color: #B7282E;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.result{
+    margin: 3rem auto 6rem;
+}
+
+.resultTtl{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.success{
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.failure{
+    text-align: center;
+    color: #B7282E;
+    line-height: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+    .form{
+        padding-top: 40px;
+    }
+    .formArea{
+        width: 90%;
+        padding: 30px 15px;
+        border-radius: 10px;
+    }
+    
+    .formList li{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px 0;
+        /* align-items: center;
+        width: 100%;
+        border-bottom: solid 1px #E6E6E6;
+        padding-bottom: 30px; */
+    }
+    .formHead{
+        width: 100%;
+    }
+    .formItem{
+        width: 100%;
+    }
+    .formBtn{
+        margin-top: 30px;
+    }
+}

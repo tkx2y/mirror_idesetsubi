@@ -1,0 +1,138 @@
+/* 見出し */
+
+.inner{
+    padding-top: 70px;
+    position: relative;
+}
+
+.inner::before{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: #2547C0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inner.white::before{
+    background-color: #fff !important;
+}
+
+/* 見出し共通で英語フォントを変更する方法を考える */
+.ttl{
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 500;
+    font-feature-settings: "palt";
+}
+
+.ttl.white{
+    color: #fff;
+}
+
+.subttl{
+    font-size: 2.25rem;
+    position: relative;
+    font-weight: 700;
+    font-feature-settings: "palt";
+    display: inline-block;
+}
+
+.subttl.white{
+    color: #fff;
+}
+
+
+/* .subttl::before{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: #2547C0;
+    position: absolute;
+    top: -70px;
+    left: 0;
+} */
+
+.white::before{
+    background-color:#fff;
+}
+
+.text{
+    margin-top: 70px;
+    font-size: 2.625rem;
+    font-weight: 700;
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+    /* white-space: nowrap; */
+}
+
+.summary{
+    margin-top: 70px;
+}
+
+.centerSubttl{
+    font-size: 2.25rem;
+    position: relative;
+    font-weight: 700;
+    font-feature-settings: "palt";
+    text-align: center;
+}
+
+.centerTtl{
+    font-size: 1rem;
+    margin-top: 25px;
+    font-weight: 500;
+    font-feature-settings: "palt";
+    text-align: center;
+}
+
+.centerTtl::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: #2547C0;
+    margin: 25px auto 0;
+    /* position: absolute;
+    bottom: -70px;
+    left: 50%; */
+}
+
+@media screen and (max-width: 767px) {
+    .inner{
+        padding-top: 40px;
+        margin-top: 40px;
+        position: relative;
+    }
+    .ttl{
+        font-size: 1rem;
+        margin-top: 10px;
+        font-weight: 500;
+    }
+    .subttl{
+        font-size: 2rem;
+        position: relative;
+        font-weight: 700;
+    }
+    .subttl::before{
+        position: absolute;
+        top: -30px;
+        left: 0;
+    }
+    .text{
+        margin-top: 30px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-feature-settings: "palt";
+        letter-spacing: 0.05em;
+        line-height: 1.2em;
+        /* white-space: nowrap; */
+    }
+    .summary{
+        margin-top: 30px;
+    }
+}

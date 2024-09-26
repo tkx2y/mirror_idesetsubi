@@ -1,0 +1,87 @@
+.backImage {
+    /* margin-top: 70px; */
+    /* padding: 140px 0; */
+    /* ページごとに背景は変わるので専用cssファイルでbackground-imageのみ指定に変更 */
+    /* background-image: url('../../public/recruitment.jpg'); */
+    /* background-image: url('../../public/firstview-01.jpg'); */
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 540px;
+    position: relative;
+}
+
+.backImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.backImage::before {
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* opacity: 0; */
+    position: absolute;
+    z-index: 2;
+}
+
+.inner{
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 3;
+    
+}
+
+.ttl{
+    font-size: 1.25rem;
+    margin-top: 15px;
+    font-weight: 400;
+    /* font-feature-settings: "palt"; */
+    color: #fff;
+}
+
+.subttl{
+    font-size: 3.5rem;
+    position: relative;
+    font-weight: 700;
+    /* font-feature-settings: "palt"; */
+    color: #fff;
+}
+
+.text{
+    margin-top: 50px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+    line-height: 1.2em;
+    color: #fff;
+    /* white-space: nowrap; */
+}
+
+@media screen and (max-width: 767px) {
+    .backImage{
+        height: 240px;
+    }
+    .subttl{
+        font-size: 2.25rem;
+    }
+    .ttl{
+        font-size: 1.125rem;
+        font-weight: 400;
+    }
+    .text{
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-top: 30px;
+    }
+}

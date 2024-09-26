@@ -1,0 +1,91 @@
+.footer{
+    background-color: #F1F4F8;
+}
+
+.inner{
+    /* width: 1200px; */
+    padding: 70px 0 0;
+    /* margin: 0 auto; */
+    /* background-color: aquamarine; */
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    /* border-left: dotted 1px #333;
+    border-right: dotted 1px #333; */
+}
+
+.logo a{
+    /* background-color: blueviolet; */
+    text-decoration: none;
+    color: #171717;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.data{
+    padding-top: 30px;
+    font-size: 0.875rem;
+}
+
+.data p{
+    margin-top: 7px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    gap: 0 20px;
+    justify-content: flex-end;
+}
+
+.nav li{
+    list-style: none;
+}
+
+.nav li a{
+    text-decoration: none;
+    color: #171717;
+}
+
+.subNav{
+    margin-top: 30px;
+    font-size: 0.875rem;
+}
+
+.copylight{
+    margin-top: 70px;
+    padding: 10px;
+    text-align: center;
+    border-top: solid 1px #E6E6E6;
+}
+
+.copylight small{
+    font-size: .75rem;
+}
+
+
+@media screen and (max-width: 767px) {
+    .inner{
+        padding-top: 30px;
+    }
+
+    .data p:first-child{
+        margin-top: 0;
+    }
+
+    .nav{
+        gap: 0 10px;
+        justify-content: flex-start;
+    }
+
+    .nav li a{
+        font-size: 0.9rem;
+    }
+    .subNav{
+        margin-top: 10px;
+    }
+
+    .copylight{
+        margin-top: 30px;
+    }
+}

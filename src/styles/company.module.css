@@ -1,0 +1,113 @@
+.message {
+    background-color: #fff;
+    position: relative;
+    margin-top: -140px;
+
+    /* 暫定 */
+    padding: 140px 0;
+}
+
+
+.head {
+    margin-bottom: 70px;
+}
+
+.policy {
+    background-color: #F1F4F8;
+    padding: 70px 0;
+}
+
+.policyList {
+    margin: 0 auto;
+    width: 740px;
+}
+
+.policyList ul {
+    display: flex;
+    flex-direction: column;
+    gap: 70px 0;
+}
+
+.policyList ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 1px #E6E6E6;
+    padding: 0 30px 30px;
+}
+
+.num {
+    width: 20%;
+    font-size: 5rem;
+    color: #C5C8CA;
+    font-weight: 700;
+}
+
+.data {
+    width: 80%;
+}
+
+.data h3{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.data p{
+    margin-top: 10px;
+    line-height: 1.7em;
+}
+
+.summary{
+    padding: 70px 0 140px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .head {
+        margin-bottom: 50px;
+    }
+    .policy {
+        padding: 50px 0;
+    }
+
+    .policyList {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .policyList ul {
+        gap: 30px 0;
+    }
+    
+    .policyList ul li {
+        padding: 0 0 30px;
+        margin: 0 20px;
+    }
+
+    .num {
+        width: 25%;
+        font-size: 4rem;
+        color: #C5C8CA;
+        font-weight: 700;
+    }
+    
+    .data {
+        width: 75%;
+    }
+
+    .data h3{
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .data p{
+        font-size: 0.875rem;
+        margin-top: 10px;
+        line-height: 1.5em;
+    }
+    
+    .summary{
+        padding: 50px 0 70px;
+    }
+}

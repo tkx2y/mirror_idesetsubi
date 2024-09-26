@@ -1,0 +1,637 @@
+/* firstview */
+.top {
+    margin-top: 70px;
+}
+
+.top h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-feature-settings: "palt";
+    line-height: 1.5em;
+    font-weight: 700;
+    position: relative;
+    z-index: 10002;
+    opacity: 0;
+    animation-duration: 500ms;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    
+}
+
+.top p {
+    font-size: 1.375em;
+    text-align: center;
+    font-feature-settings: "palt";
+    line-height: 1.5em;
+    margin-top: 70px;
+    position: relative;
+    z-index: 10002;
+    opacity: 0;
+    animation-duration: 500ms;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.load{
+    color: #fff;
+}
+
+/* オープンアニメーション　テスト */
+
+/* 残作業　文字をフェードイン+白 　アニメーション終了後に黒にもどす　初期読み込み時はスクロールさせない*/
+.topEffect::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10000;
+}
+
+.topEffect::after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2547C0;
+    z-index: 10001;
+    animation-name: topEffectAnime;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.topEffect.active::before {
+    display: none !important;
+    /* animation-name: topEffectAfterAnime; */
+}
+
+.topEffect.active::after {
+    /* display: none !important; */
+    animation-name: topEffectAfterAnime;
+}
+
+@keyframes topEffectAnime {
+    from {
+        /* opacity: 1; */
+        transform: translateY(100vh);
+    }
+
+    to {
+        /* opacity: 0; */
+        transform: translateY(0);
+    }
+}
+
+@keyframes topEffectAfterAnime {
+    from {
+        /* opacity: 1; */
+        transform: translateY(0);
+    }
+
+    to {
+        /* opacity: 0; */
+
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes topEffectFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.firstview {
+    width: 90%;
+    max-width: 1780px;
+    aspect-ratio: 5 / 2;
+    /* height: 700px; */
+    margin: 80px auto 0;
+    /* background-color: aquamarine; */
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    animation-duration: 500ms;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.firstview img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    /* aspect-ratio: 5 / 3; */
+    object-fit: cover;
+}
+
+.message {
+    background-color: #fff;
+    position: relative;
+    margin-top: -140px;
+
+    /* 暫定 */
+    padding: 140px 0;
+}
+
+.message::before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 100%;
+    background-color: #F1F4F8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 30px;
+}
+
+.messageList {
+    padding: 70px 5rem 0;
+}
+
+.messageList ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.messageList ul li {
+    list-style: none;
+    width: 280px;
+}
+
+.messageIcon {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 20px;
+}
+
+.messageIcon.smoll {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+}
+
+.messageIcon img {
+    width: 100%;
+}
+
+.messageItem {
+    border-top: solid 1px #E6E6E6;
+}
+
+.messageItem span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 20px;
+    display: block;
+}
+
+.messageItem h3 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+
+.messageItem p {
+    font-size: 0.9375rem;
+    margin-top: 1rem;
+    line-height: 1.75rem;
+}
+
+
+/* servis */
+.servis {
+    background: linear-gradient(#315578, #192B3C);
+    margin-top: 70px;
+    padding-bottom: 70px;
+}
+
+.servisText {
+    color: #fff;
+}
+
+.servisTtl {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.servisList {
+    margin-top: 70px;
+}
+
+.servisData {
+    color: #fff;
+    margin-top: 30px;
+}
+
+.servisData span {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.servisData h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.servisData p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 15px;
+    line-height: 1.5em;
+}
+
+.slideWrapper {
+    max-width: 100%;
+}
+
+.slideImage {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .slideImage {
+        aspect-ratio: initial;
+    }
+}
+
+
+/* 企業情報 */
+.company {
+    background-color: #fff;
+    padding: 70px;
+}
+
+.companyInner {
+    background-color: #F1F4F8;
+    padding: 0 70px 70px;
+    border-radius: 30px;
+}
+
+
+/* 採用情報 */
+.recruitment {
+    background-color: #F1F4F8;
+    /* height: 3000px; */
+    padding-bottom: 70px;
+}
+
+.recruitmentBg {
+    width: 100%;
+    height: 600px;
+    background-image: url('../../public/recruitment.jpg');
+    /* background-position:center; */
+    background-position: top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.recruitmentInner {
+    padding-bottom: 70px;
+    margin: -140px 70px 0;
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* お知らせ */
+.news {
+    background-color: #fff;
+    padding-bottom: 70px;
+}
+
+.newsList {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.newsList li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 1px #E6E6E6;
+    padding: 20px 10px;
+    /* margin-top: 30px; */
+}
+
+.newsList li p {
+    font-size: .875rem;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.newsList li span {
+    font-size: .75rem;
+    color: #fff;
+    background-color: #BCBCBC;
+    padding: 5px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.newsList li a {
+    text-decoration: none;
+    color: #171717;
+    margin-left: 20px;
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+}
+
+.newsList li a:hover {
+    opacity: 0.7;
+}
+
+
+/* お問い合わせ */
+.contact {
+    /* margin-top: 70px; */
+    padding: 140px 0;
+    background-image: url('../../public/recruitment.jpg');
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    /* height: 100%; */
+    position: relative;
+}
+
+.contact::after {
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* opacity: 0; */
+    position: absolute;
+    z-index: 1;
+}
+
+.contactInner {
+    background-color: #fff;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 70px;
+    position: relative;
+    z-index: 2;
+    border-radius: 30px;
+}
+
+.contactText {
+    margin: 30px auto 50px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 767px) {
+    .top {
+        margin-top: 50px;
+    }
+
+    .top h1 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .top p {
+        font-size: 1rem;
+        padding: 0 30px;
+        margin-top: 50px;
+    }
+
+    .firstview {
+        width: 90%;
+        max-width: 1780px;
+        aspect-ratio: 1 / 1;
+        /* height: 700px; */
+        margin: 50px auto 0;
+        /* background-color: aquamarine; */
+        position: relative;
+        z-index: 1;
+    }
+
+    .firstview img {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        /* aspect-ratio: 5 / 3; */
+        object-fit: cover;
+    }
+
+    .message {
+        background-color: #fff;
+        position: relative;
+        margin-top: -250px;
+
+        /* 暫定 */
+        padding: 100px 0 50px;
+    }
+
+    .messageList {
+        padding: 50px 20px 0;
+    }
+
+    .messageList ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px 0;
+    }
+
+    .messageList ul li {
+        list-style: none;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .messageIcon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 20px;
+    }
+
+    .messageIcon.smoll {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 30px;
+    }
+
+    .messageIcon img {
+        width: 100%;
+    }
+
+    .messageItem span {
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-top: 15px;
+        display: block;
+    }
+
+    .messageItem h3 {
+        font-size: 1.25rem;
+        margin-top: 15px;
+    }
+
+    .messageItem p {
+        font-size: 0.9375rem;
+        margin-top: 1rem;
+        line-height: 1.75rem;
+    }
+
+    .servis {
+        padding-bottom: 50px;
+    }
+
+    .servisText {
+        font-size: 0.9375rem;
+    }
+
+    .servisTtl {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .servisList {
+        margin-top: 50px;
+    }
+
+    .servisData h3 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .servisData p {
+        font-size: 0.9375rem;
+    }
+
+    .servisBtn {
+        margin: 50px 20px 0;
+    }
+
+    .company {
+        background-color: #fff;
+        padding: 50px 20px;
+    }
+
+    .companyInner {
+        background-color: #F1F4F8;
+        padding: 10px 0 30px;
+        border-radius: 30px;
+    }
+
+    .recruitment {
+        padding-bottom: 50px;
+    }
+
+
+    .recruitmentBg {
+        height: 300px;
+    }
+
+    .recruitmentInner {
+        padding: 10px 0 30px;
+        margin: -140px 20px 0;
+        background-color: #fff;
+        border-radius: 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+
+    .news {
+        padding-bottom: 50px;
+    }
+
+    .newsList {
+        margin-top: 30px;
+        gap: 30px 0;
+    }
+
+    .newsList li {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .newsList li a {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .contact {
+        /* margin-top: 70px; */
+        padding: 0;
+        background-image: url('../../public/recruitment.jpg');
+        background-position: center center;
+        background-size: cover;
+        /* background-size: 100%; */
+        background-repeat: no-repeat;
+        height: 400px;
+        position: relative;
+    }
+
+    .contact::after {
+        content: '';
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        /* opacity: 0; */
+        position: absolute;
+        z-index: 1;
+    }
+
+    .contactInner {
+        width: 90%;
+        padding: 20px 20px 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+
+        /* margin: 20px auto; */
+        box-sizing: border-box;
+    }
+
+    .contactText {
+        margin: 30px auto 30px;
+        text-align: center;
+        font-size: 0.875rem;
+        line-height: 1.5em;
+    }
+
+}
